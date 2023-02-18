@@ -1,0 +1,182 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dnipro Official</title>
+    <link rel="icon" href="assets/images/logo_metro1.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="container">
+            <div class="header__inner">
+                <img class="header__logo" src="assets/images/logo_metro1.png" alt="Dnipro logo">
+                <div class="nav">
+                    <a href="#" class="nav__link">Светофоры</a>
+                    <a href="#" class="nav__link">Сообщество</a>
+                    <a href="#" class="nav__link">Правила</a>
+                    <a href="#" class="nav__link">Коллекция</a>
+                    <a href="#" class="nav__link">Играть</a>
+                    <button class="nav__menu" type="button">
+                        <div class="nav__menu-line"></div>
+                        <div class="nav__menu-line"></div>
+                        <div class="nav__menu-line"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- INTRO -->
+
+    <div class="intro">
+        <div class="container">
+            <div class="intro__inner">
+                <div class="intro__suptitle">Metrostroi</div>
+                <div class="intro__title">Dnipro Official</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRAFFIC -->
+
+
+    <section class="traffic">
+        <div class="container">
+            <h2 class="traffic__title">Открытие светофоров
+                <div class="traffic__lights-container">
+                    <div class="traffic__lights" style="background-color: white;"></div>
+                    <div class="traffic__lights" style="background-color: blue"></div>
+                    <div class="traffic__lights" style="background-color: rgb(10, 215, 5)"></div>
+                    <div class="traffic__lights" style="background-color: rgb(241, 217, 2)"></div>
+                    <div class="traffic__lights" style="background-color: rgb(209, 11, 11)"></div>
+                </div>
+            </h2>
+
+            <div class="traffic__routes">
+                <div class="routes__item item__hollow" id="item__selector">
+                    <h3 class="routes__title"><op>Построение маршрутов</op><hr class="routes__divider"></h3>
+                    <form class="routes__form" action="/" method="post">
+                        <select name="start" id="path" class="routes__selector">
+                            <option value="none">Выберите пункт начала движения:</option>
+                            <option value="depot1">Выезд на линию из Депо по 1-му пути</option>
+                            <option value="depot1">Выезд на линию из Депо по 2-му пути</option>
+                            <option value="pk1">1-ый станционный путь ст. Покровская</option>
+                            <option value="pk2">2-ой станционный путь ст. Покровская</option>
+                            <option value="pk3">3-ий станционный путь ст. Покровская</option>
+                            <option value="pk4">4-ый станционный путь ст. Покровская</option>
+                            <option value="tpk1">Тупик по первому пути ст. Покровская</option>
+                            <option value="tpk2">Тупик по второму пути ст. Покровская</option>
+                            <option value="vz1">1-ый станционный путь ст. Вокзальная</option>
+                            <option value="vzd">2-ой станционный путь ст. Вокзальная</option>
+                            <option value="vz3">3-ий станционный путь ст. Вокзальная</option>
+                            <option value="vze">Тупик по первому пути ст. Вокзальная</option>
+                            <option value="vzg">Тупик по второму пути ст. Вокзальная</option>
+                        </select>
+                    </form>
+                    <p style="padding-left: 10px;"><op class="routes__attention">Для выезда из депо к светофору E1 или E2 достаточно выбрать нужный путь кнопками на «пульте» в <b>месте спавна игрока</b>.</op></p>
+                    <p style="padding-left: 10px;"><op class="routes__attention">Для въезда в депо необходимо выбрать путь на «пульте» при <b>выезде с оборота</b> ст. Покровская <b>в сторону депо.</b></op></p>
+                    <form action="/" method="post">
+                        <select disabled name="start" id="pathTo" class="routes__selector">
+                            <option value="none">Выберите пункт назначения:</option>
+                        </select>
+                    </form>
+
+                    <div class="routes__command" id="command">
+                        <op id="dots" class="command__text">...</op>
+                    </div>
+                    
+                </div>
+
+                <div class="routes__item item__hollow">
+                    <h3 class="routes__title">Станции<hr class="routes__divider"></h3>
+                    <p class="routes__stations" id="depot"><op>depot - Депо</op></p>
+                    <p class="routes__stations"><op>tupik2 - Оборот за ст. Покровская</op></p>
+                    <p class="routes__stations"><op>106 - ст. Покровская</op></p>
+                    <p class="routes__stations"><op>105 - ст. Проспект Свободы</op></p>
+                    <p class="routes__stations"><op>104 - ст. Заводская</op></p>
+                    <p class="routes__stations"><op>103 - ст. Металлургов</op></p>
+                    <p class="routes__stations"><op>102 - ст. Метростроителей</op></p>
+                    <p class="routes__stations"><op>101 - ст. Вокзальная</op></p>
+                    <p class="routes__stations"><op>tupik1 - Оборот за ст. Вокзальная</op></p>
+                </div>
+
+                <div class="routes__item item__hollow">
+                    <h3 class="routes__title">Команды<hr class="routes__divider"></h3>
+                    <div class="routes__commands sopen">
+                        <span class="commands_command commands__box">!sopen<br>!sclose</span>
+                        <span class="commands__description commands__box">Открыть светофор<br>Закрыть светофор</span>
+                    </div>
+                    <div class="routes__commands">
+                        <span class="commands_command commands__box">!station</span>
+                        <span class="commands__description commands__box">Телепорт на станцию</span>
+                    </div>
+                    <div class="routes__commands">
+                        <span class="commands_command commands__box">!traintp</span>
+                        <span class="commands__description commands__box">Телепорт в состав</span>
+                    </div>
+                    <p style="padding-left: 10px;"><op class="routes__attention">Следующие команды используются только при нахождении состава на станции.</op></p>
+                    <div class="routes__commands">
+                        <span class="commands_command commands__box">!expass</span>
+                        <span class="commands__description commands__box">Высадка пассажиров</span>
+                    </div>
+                    <div class="routes__commands">
+                        <span class="commands_command commands__box">!sget</span>
+                        <span class="commands__description commands__box">Получить авто-расписание</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- COMMUNITY -->
+
+
+    <section class="comm">
+        <div class="container">
+            <h2 class="comm__title">Сообщество</h2>
+            <div class="comm__slider">
+                <div class="comm__slider-item" id="superAdmin">
+                    <h3 class="routes__title"><op>Старш. администрация</op><hr></h3>
+                    <div class="comm__proff" id="ceo">Начальник метрополитена</div>
+                    <div class="comm__proff" id="viceCeo">Зам. начальника метрополитена</div>
+                    <div class="comm__proff" id="rev">Ревзиор</div>
+                    <div class="comm__proff" id="nsd">Начальник службы движения</div>
+                    <div class="comm__proff" id="nsps">Начальник службы подв. состава</div>
+                    <div class="comm__proff" id="smi">Старший машинист-инструктор</div>
+                </div>
+                <div class="comm__slider-item" id="admin">
+                    <h3 class="routes__title"><op>Администрация</op><hr></h3>
+                    <div class="comm__proff" id="dsp">Диспетчер</div>
+                    <div class="comm__proff" id="mi">Машинист-инструктор</div>
+                    <h3 class="routes__title"><op>Мл. администрация</op><hr></h3>
+                    <div class="comm__proff" id="iomi"> И. О. машиниста-инструктора</div>
+                </div>
+                <div class="comm__slider-item">
+                    <h3><op>Почётные машинисты</op><hr></h3>
+                    <p style="padding-left: 10px;"><op class="routes__attention">Игроки материально поддержавшие развитие проекта:</op></p>
+                    <p class="comm__pi">
+                        Artem_Stalin<br>
+                        Danurchik<br>
+                        JAN ROMANOWI<br>
+                        Kifa<br>
+                        KotoLizator<br>
+                        Minardan<br>
+                        sheeesh001<br>
+                        БаБуиНчиК_Бо<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

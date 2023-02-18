@@ -1,0 +1,508 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #161616;
+    color: #fff;
+}
+
+div, span, button {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: 500;
+    padding: 30px 0 50px;
+    margin: 0;
+    opacity: .9;
+}
+h2 {
+    font-size: 50px;
+    font-weight: 500;
+    padding: 25px 0 40px;
+    margin: 0;
+    opacity: .9;
+}
+
+h3 {
+    font-size: 27px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: fff;
+}
+
+op {
+    opacity: .9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    width: 100%;
+}
+
+/* HEADER */
+
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.header__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.header__logo {
+    width: 80px;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.nav__link {
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-left: 4.5em;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.nav__menu {
+    display: none;
+    border: none;
+    background: none;
+}
+
+.nav__menu-line {
+    content: "";
+    background: #fff;
+    color: #fff;
+    width: 50px;
+    height: 10px;
+    border-radius: 5px;
+    margin: 3px;
+    opacity: .85;
+}
+
+
+/* INTRO */
+
+
+.intro {
+    background: url(assets/images/depot_tracks_bg_shadow.jpg) no-repeat center / cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.intro__inner {
+    text-align: left;
+}
+
+.intro__title {
+    font-size: 70px;
+    margin-bottom: 100px;
+    opacity: .9;
+}
+
+.intro__suptitle {
+    font-size: 40px;
+    margin-bottom: -10px;
+    margin-left: 2px;
+    opacity: .7;
+}
+
+
+/* TRAFFIC */
+
+
+.traffic {
+    width: 100%;
+}
+
+.traffic__title {
+    position: relative;
+    padding-bottom: 15px;
+    max-width: 530px;
+}
+
+.traffic__lights-container {
+    right: -5px;
+    bottom: -20px;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.traffic__lights {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.traffic__routes {
+    display: flex;
+    flex: 1 1 0;
+    justify-content: flex-start;
+    margin-top: 100px;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+
+/* Routes */
+
+.routes__item {
+    width: 25%;
+    height: 400px;
+    background-color: #59667a;
+    border-radius: 15px;
+    padding: 25px;
+    margin-right: 75px;
+    margin-bottom: 30px;
+    min-width: 300px;
+    
+}
+
+#item__selector {
+    position: relative;
+}
+
+#item__selector::after {
+    display: none;
+    position: absolute;
+    content: "";
+    right: 5;
+    bottom: -27px;
+    border: #fff 2px solid;
+    border-left: none;
+    border-bottom: none;
+    width: 13px;
+    height: 13px;
+    transform: rotate(45deg);
+}
+
+.item__hollow {
+    background-color: transparent;
+    border: #fff 1px solid;
+    padding: 24px;
+}
+
+.routes__item:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.routes__title {
+
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.routes__selector {
+    background-color: #434d5c;
+    background-color: transparent;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 15px;
+    border-color: rgb(137, 137, 137);
+    width: 100%;
+    height: 40px;
+}
+
+.routes__attention {
+    font-size: 14px;
+    opacity: .5;
+    height: auto;
+    text-align: justify;
+}
+
+.routes__command {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #434d5c;
+    background-color: transparent;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 30px;
+    border-radius: 15px;
+    border: rgb(137, 137, 137) 1px solid;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+.routes__clipboard {
+    position: relative;
+    z-index: 2;
+    content: "";
+
+    width: 20px;
+    height: 26px;
+    border-radius: 5px;
+    border: 3px #59667a solid;
+    border-color: rgb(137, 137, 137);
+
+    transform: translateY(-3px);
+}
+
+.routes__clipboard::after {
+    position: absolute;
+    right: 2;
+    top: 2;
+    z-index: 1;
+    content: "";
+
+    width: 20px;
+    height: 26px;
+    border: 3px #59667a solid;
+    border-color: #fff;
+    background-color: #434d5c;
+    background-color: #161616;
+    border-radius: 5px;
+}
+
+/* Commands */
+
+.routes__commands {
+    display: flex;
+    height: 40px;
+    margin-bottom: 15px;
+    background-color:#434d5c;
+    background-color: transparent;
+    border-radius: 15px;
+    justify-content: space-between;
+}
+
+.sopen {
+    height: 55px;
+}
+
+.commands_command {
+    margin-right: 20px;
+}
+
+.commands__box {
+    background-color: #434d5c;
+    background-color: transparent;
+    font-size: 14px;
+    border-radius: 15px;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(137, 137, 137);
+    border-image: initial;
+    line-height: 1.2;
+}
+
+.routes__stations {
+    margin: 11px 0px;
+    padding: 3px 10px;
+    background-color:#434d5c;
+    background-color: transparent;
+    border-radius: 15px;
+    border: solid 1px rgb(137, 137, 137);
+    border-image: initial;
+}
+
+#depot {
+    margin-top: 0;
+}
+
+
+/* COMMUNITY */
+
+
+.comm__title {
+    margin-top: 75px;
+    margin-bottom: 20px;
+}
+.comm__slider {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+}
+
+.comm__slider-item {
+    width: 300px;
+    height: 400px;
+    min-width: 300px;
+    border-radius: 15px;
+    border: #fff 1px solid;
+    padding: 24px;
+    margin-right: 75px;
+    margin-bottom: 30px;
+}
+
+.comm__slider-item:last-child {
+    margin: 0;
+}
+
+.comm__proff {
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #898989;
+    transition: .2s ease-in-out;
+    margin-bottom: 27px;
+    text-shadow: 1px 1px #000;
+}
+
+.comm__proff:last-child {
+    margin-bottom: 0;
+}
+
+.comm__pi {
+    padding-left: 10px;
+    line-height: 2.1;
+    border: 1px solid #898989;
+    border-radius: 5px;
+}
+
+/* PROFESSIONS COLORS */
+
+#ceo:hover { background-color: #ea3323; border-color: #ea3323; }
+
+#viceCeo:hover { background-color: #2602f5; border-color: #2602f5; }
+
+#rev:hover { background-color: #0000f5; border-color: #0000f5; }
+
+#nsd:hover { background-color: #7262f6; border-color: #7262f6; }
+
+#nsps:hover {background-color: #0065a8; border-color: #0065a8; }
+
+#smi:hover { background-color: #63d7d8; border-color: #63d7d8; }
+
+#dsp:hover { background-color: #f09636; border-color: #f09636; }
+
+#mi:hover { background-color: #4daaac; border-color: #4daaac; }
+
+#iomi:hover { background-color: #388081; border-color: #388081; }
+
+@media (max-width: 950px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    /* NAVIGATION */
+
+    .nav__link {
+        display: none;
+    }
+
+    .nav__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    /* INTRO */
+
+
+    .intro__title {
+        font-size: 60px;
+    }
+
+    .intro__suptitle {
+        font-size: 35px;
+    }
+
+    /* TRAFFIC */
+
+
+    .traffic__lights {
+        width: 17px;
+        height: 17px;
+        margin-right: 13px;
+    }
+
+    .traffic__title {
+        max-width: 425px;
+    }
+
+    .traffic__lights-container {
+        bottom: -10px;
+    }
+
+}
+
+@media (max-width: 490px) {
+
+    h2 {
+        font-size: 33px;
+    }
+
+    .intro__title {
+        font-size: 50px;
+    }
+
+
+        /* TRAFFIC */
+
+
+        .traffic__lights {
+            width: 13px;
+            height: 13px;
+            margin-right: 9px;
+        }
+    
+        .traffic__title {
+            max-width: 365px;
+        }
+    
+        .traffic__lights-container {
+            bottom: -5px;
+        }
+
+        .traffic__routes {
+            margin-top: 75px;
+        }
+
+        #item__selector::after {
+            display: block;
+        }
+
+}
