@@ -198,7 +198,7 @@ function nameSetter(id, target) {
             break;
 
         case 'dsp':
-            target.innerText = 'KotoLizator';
+            target.innerText = 'Временно отсутствует';
             break;
 
         case 'mi':
