@@ -141,13 +141,15 @@ document.querySelector('#pathTo').addEventListener('change', function () {
         document.getElementById('clipboard').remove();
     }
 
-    const from = document.getElementById('path').value;
+    let from = document.getElementById('path').value;
     
     if (from == 'tpk1') {
-        from == 'pk1';
+        from = 'pk1';
     } else if (from == 'tpk2') {
-        from == 'pk2';
+        from = 'pk2';
     }
+    console.log('privet')
+    console.log(from + ' eto from');
     const to = document.getElementById('pathTo').value;
     const clipboard = document.createElement('div');
     clipboard.classList.add("routes__clipboard");
