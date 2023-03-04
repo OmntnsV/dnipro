@@ -127,8 +127,22 @@ function setSelectorOptions(displayList) {
 }
 
 document.querySelector('#pathTo').addEventListener('change', function () {
-    document.getElementById('dots').remove();
+
+    if (document.getElementById('dots') === null) {
+        console.log('NETU BLYAT TOCHEK');
+    } else {
+        document.getElementById('dots').remove();
+    }
+
+    if (document.getElementById('copy') === null) {
+        console.log('NETU BLYAT KOMANDI');
+    } else {
+        document.getElementById('copy').remove();
+        document.getElementById('clipboard').remove();
+    }
+
     const from = document.getElementById('path').value;
+    
     if (from == 'tpk1') {
         from == 'pk1';
     } else if (from == 'tpk2') {
@@ -137,23 +151,28 @@ document.querySelector('#pathTo').addEventListener('change', function () {
     const to = document.getElementById('pathTo').value;
     const clipboard = document.createElement('div');
     clipboard.classList.add("routes__clipboard");
+    clipboard.setAttribute('id', 'clipboard');
     const way = '/sopen ' + from + '-' + to;
     const wayOpacity = document.createElement('op');
     wayOpacity.innerText = way;
     wayOpacity.setAttribute('id', 'copy')
     wayOpacity.classList.add('command__text');
     document.getElementById('command').appendChild(wayOpacity);
+  
     document.getElementById('command').appendChild(clipboard);
+
     let borderColor = document.getElementById('command');
     borderColor.style.border = "#fff 1px solid";
+    
 });
 
 document.getElementById('command').addEventListener('click', function(){
     const textToCopy = document.getElementById('copy').innerText;
     console.log(textToCopy);
     console.log(typeof textToCopy);
-    navigator.clipboard.writeText(textToCopy);
-    alert("Команда скопирована");
+    navigator.clipboard.writeText(textToCopy).then(function(){
+        alert("Команда скопирована");
+    });
 });
 
 
