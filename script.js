@@ -190,7 +190,7 @@ for (let index = 0; index < employees.length; index++) {
     });
 }
 
-function nameSetter(id, target) {
+function nameSetter(id, target) { // Список администрации
     switch (id) {
         case 'ceo':
             target.innerText = 'Serge Smile';
@@ -225,7 +225,7 @@ function nameSetter(id, target) {
             break;
 
         case 'iomi':
-            target.innerText = 'Nemashinist_metro';
+            target.innerText = 'Временно отсутствует';
             break;
 
         case 'pm':
