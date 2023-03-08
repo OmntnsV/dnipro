@@ -16,7 +16,6 @@ const options = {
 
   console.log('downloading internet');
 
-document.getElementById('ceo').addEventListener('click', function(){
     console.log('dwnldng trnt');
     GSheetReader(
         options,
@@ -27,4 +26,3 @@ document.getElementById('ceo').addEventListener('click', function(){
           // OPTIONAL: handle errors here
         }
       );
-} )
