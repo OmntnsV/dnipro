@@ -351,7 +351,27 @@ section {
 .comm__title {
     margin-top: 75px;
     margin-bottom: 20px;
+    position: relative;
+    width:fit-content;
+    cursor: pointer;
 }
+
+.comm__dislink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.comm__title::after {
+    position: absolute;
+    right: -70px;
+    top: 32%;
+    width: 45px;
+    height: 35px;
+    content: "";
+    background: url(assets/images/Discord-Logo-White\ 1.png) no-repeat center / cover;
+    cursor: pointer;
+}
+
 .comm__slider {
     width: 100%;
     overflow-x: scroll;

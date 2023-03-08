@@ -1,0 +1,15 @@
+{
+  "name": "metrostroi_dnipro",
+  "version": "1.0.0",
+  "description": "Website for Dnipro project",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "g-sheets-api": "^2.1.3"
+  }
+}
