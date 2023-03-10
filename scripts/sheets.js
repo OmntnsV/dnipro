@@ -42,8 +42,8 @@ console.log(data);
 
 for (let row = 0; row < data.table.rows.length; row++) {
   const element = data.table.rows[row].c;
-  const nick = element[0];
-  const prof = element[3];
+  const nick = element[0].v;
+  const prof = element[3].v;
   console.log(nick + ': ' + prof);
 }
 });
