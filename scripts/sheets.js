@@ -33,12 +33,17 @@ const sheetRange = 'A2:D11';
 
 const sheetLink = 'https://docs.google.com/spreadsheets/d/' + sheetId + '/gviz/tq?sheet='
 + '1' + '&range=' + 'A2:G11';
-console.log(sheetLink);
 
 fetch(sheetLink, {crossorigin: true})
 .then (res => res. text ())
 .then (rep => {
 let data = JSON.parse(rep.substr(47).slice(0, -2));
-
 console.log(data);
+
+for (let row = 0; row < data.table.rows.length; row++) {
+  const element = data.table.rows[row].c;
+  const nick = element[0];
+  const prof = element[3];
+  console.log(nick + ': ' + prof);
+}
 });
