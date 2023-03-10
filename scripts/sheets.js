@@ -31,14 +31,14 @@ const sheetId = '1eWicJkKFLfr8pz4CsIL_TDEfbZl9nACHv8i-57LTiiU';
 const sheetPage = 'Старшая%20администрация';
 const sheetRange = 'A2:D11';
 
-const sheetLink = 'https://docs.google.com/spreadsheets/d/' + '1hwTzLlfQ4bNDgB_ze5xFqAviQbn7IMh9CutSXO_PGk8' + '/gviz/tq?sheet='
-+ '1' + '&range=' + 'A1:C6';
+const sheetLink = 'https://docs.google.com/spreadsheets/d/' + sheetId + '/gviz/tq?sheet='
++ '1' + '&range=' + 'A2:G11';
 console.log(sheetLink);
 
 fetch(sheetLink, {crossorigin: true})
 .then (res => res. text ())
 .then (rep => {
-// let data = JSON.parse(rep.substr(47).slice(0, -2));
+let data = JSON.parse(rep.substr(47).slice(0, -2));
 
-console.log(rep);
+console.log(data);
 });
