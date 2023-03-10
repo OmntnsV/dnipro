@@ -244,7 +244,7 @@ function nameDeleter(element) {
     const idOfElement = element.id;
     switch (idOfElement) {
         case 'ceo':
-            element.innerText = 'Начальник метрополитена';
+            element.innerText = 'Разработчик';
             break;
         
         case 'viceCeo':
