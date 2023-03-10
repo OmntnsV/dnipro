@@ -25,7 +25,6 @@ for (let row = 0; row < data.table.rows.length; row++) {
     if (prof[job] != undefined) {
         prof[job] += ", " + nick;
     }else {
-        console.log(prof[job]);
         prof[job] = nick;
     }
   }
