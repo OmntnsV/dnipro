@@ -32,6 +32,6 @@ for (let row = 0; row < data.table.rows.length; row++) {
 }
 });
 
-function hameGetter(request) {
-
+function nameGetter(request) {
+    return prof[request];
 }

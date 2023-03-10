@@ -195,7 +195,7 @@ for (let index = 0; index < employees.length; index++) {
 function nameSetter(id, target) { // Список администрации
     switch (id) {
         case 'ceo':
-            target.innerText = 'Serge Smile';
+            target.innerText = /*'Serge Smile'*/nameGetter(target.innerText);
             break;
         
         case 'viceCeo':
