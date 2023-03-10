@@ -8,7 +8,7 @@ const sheetLink = 'https://docs.google.com/spreadsheets/d/' + sheetId + '/gviz/t
 + sheetPage + '&range=' + 'A2:G11';
 
 let data;
-let prof;
+let prof = {};
 
 fetch(sheetLink, {crossorigin: true})
 .then (res => res. text ())
@@ -22,10 +22,10 @@ for (let row = 0; row < data.table.rows.length; row++) {
     const nick = "" + element[0].v;
     const job = element[3].v;
     console.log(job + ': ' + nick);
-    if (prof[job].name != null) {
-        prof[job].name += ", " + nick;
+    if (prof.job != null) {
+        prof[job] += ", " + nick;
     }else {
-        prof[job].name = nick;
+        prof[job] = nick;
     }
   }
 }
