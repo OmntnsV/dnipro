@@ -36,6 +36,7 @@ function nameGetter(request) {
   if (request = "Начальник Метрополитена") {
     return prof["Разработчик"];
   }else {
+    console.log("prof[request]: " + prof[request]);
     return prof[request];
   }
 }
