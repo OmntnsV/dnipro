@@ -193,7 +193,7 @@ for (let index = 0; index < employees.length; index++) {
 }
 
 function nameSetter(id, target) { // Список администрации
-    if (id == "superAdmin" || id == "admin" || id == null){
+    if (id == "superAdmin" || id == "admin" || id == ""){
         console.log("denied " + id);
     }else {
         console.log("procced" + id);
