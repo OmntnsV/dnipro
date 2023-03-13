@@ -33,7 +33,7 @@ for (let row = 0; row < data.table.rows.length; row++) {
 
 function nameGetter(request) {
   console.log("Тест " + request);
-  const forIf = request;
+  const forIf = "Начальник метрополитена";
   if (request === forIf) {
     console.log("YPAAA");
     return prof["Разработчик"];
