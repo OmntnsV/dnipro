@@ -193,11 +193,10 @@ for (let index = 0; index < employees.length; index++) {
 }
 
 function nameSetter(id, target) { // Список администрации
-    
+    console.log(id);
     if (id != "superAdmin" || id != "admin"){
         
     }else {
-        console.log(id);
         target.innerText = nameGetter(target.innerText);
     }
     /*switch (id) {
@@ -256,7 +255,7 @@ function nameDeleter(element) {
             break;
         
         case 'viceCeo':
-            element.innerText = 'Зам. начальника метрополитена';
+            element.innerText = 'Зам. нач. метрополитена';
             break;
 
         case 'rev':
