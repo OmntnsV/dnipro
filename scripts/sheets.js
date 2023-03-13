@@ -32,5 +32,9 @@ for (let row = 0; row < data.table.rows.length; row++) {
 });
 
 function nameGetter(request) {
+  if (request = "Начальник Метрополитена") {
+    return prof["Разработчик"];
+  }else {
     return prof[request];
+  }
 }
