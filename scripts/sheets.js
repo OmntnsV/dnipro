@@ -33,8 +33,9 @@ for (let row = 0; row < data.table.rows.length; row++) {
 
 function nameGetter(request) {
   console.log(request);
+  console.log(prof);
   if (request === "Начальник Метрополитена") {
-    console.log(prof);
+    console.log("YPAAA");
     return prof["Разработчик"];
   }else {
     return prof[request];
