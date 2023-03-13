@@ -194,7 +194,11 @@ for (let index = 0; index < employees.length; index++) {
 
 function nameSetter(id, target) { // Список администрации
     
-    target.innerText = nameGetter(target.innerText);
+    if (id != "superAdmin"){
+        
+    }else {
+        target.innerText = nameGetter(target.innerText);
+    }
     /*switch (id) {
         case 'ceo':
             target.innerText = nameGetter(target.innerText);
