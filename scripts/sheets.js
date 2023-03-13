@@ -35,8 +35,8 @@ for (let row = 0; row < data.table.rows.length; row++) {
 });
 
 fetch(sheetLink2, {crossorigin: true})
-.then (res => res. text ())
-.then (rep => {
+.then (res2 => res2. text ())
+.then (rep2 => {
 data = JSON.parse(rep.substr(47).slice(0, -2));
 console.log(data);
 
