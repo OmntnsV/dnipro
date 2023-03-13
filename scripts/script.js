@@ -193,7 +193,7 @@ for (let index = 0; index < employees.length; index++) {
 }
 
 function nameSetter(id, target) { // Список администрации
-    console.log(id);
+    console.log(target);
     if (id != "superAdmin" || id != "admin"){
         
     }else {
