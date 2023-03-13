@@ -32,8 +32,8 @@ for (let row = 0; row < data.table.rows.length; row++) {
 });
 
 function nameGetter(request) {
-  console.log(request);
   if (request = "Начальник Метрополитена") {
+    console.log("Requested " + request);
     return prof["Разработчик"];
   }else {
     console.log("prof[request]: " + prof[request]);
