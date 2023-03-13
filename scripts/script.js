@@ -259,11 +259,11 @@ function nameDeleter(element) {
             break;
 
         case 'nsd':
-            element.innerText = 'Начальник службы движения';
+            element.innerText = 'Нач. службы движения';
             break;
 
         case 'nsps':
-            element.innerText = 'Начальник службы подв. состава';
+            element.innerText = 'Нач. службы подвижного состава';
             break;
 
         case 'smi':
