@@ -196,7 +196,7 @@ function nameSetter(id, target) { // Список администрации
     if (id == "superAdmin" || id == "admin" || id == null){
         console.log("denied " + id);
     }else {
-        console.log("procced");
+        console.log("procced" + id);
         target.innerText = nameGetter(target.innerText);
     }
     /*switch (id) {
