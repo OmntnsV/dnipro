@@ -193,6 +193,7 @@ for (let index = 0; index < employees.length; index++) {
 }
 
 function nameSetter(id, target) { // Список администрации
+    
     target.innerText = nameGetter(target.innerText);
     /*switch (id) {
         case 'ceo':
@@ -246,7 +247,7 @@ function nameDeleter(element) {
     const idOfElement = element.id;
     switch (idOfElement) {
         case 'ceo':
-            element.innerText = 'Разработчик';
+            element.innerText = 'Начальник метрополитена';
             break;
         
         case 'viceCeo':
