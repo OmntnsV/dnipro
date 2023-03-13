@@ -32,12 +32,10 @@ for (let row = 0; row < data.table.rows.length; row++) {
 });
 
 function nameGetter(request) {
-  console.log("Request asked " + request);
   if (request == "Начальник Метрополитена") {
-    console.log("Requested given " + request);
+    console.log(prof);
     return prof["Разработчик"];
   }else {
-    console.log("prof[request]: " + prof[request]);
     return prof[request];
   }
 }
