@@ -193,9 +193,10 @@ for (let index = 0; index < employees.length; index++) {
 }
 
 function nameSetter(id, target) { // Список администрации
-    switch (id) {
+    target.innerText = nameGetter(target.innerText);
+    /*switch (id) {
         case 'ceo':
-            target.innerText = /*'Serge Smile'*/nameGetter(target.innerText);
+            target.innerText = nameGetter(target.innerText);
             break;
         
         case 'viceCeo':
@@ -238,7 +239,8 @@ function nameSetter(id, target) { // Список администрации
             
             break;
     }
-};
+    */
+}
 
 function nameDeleter(element) {
     const idOfElement = element.id;
