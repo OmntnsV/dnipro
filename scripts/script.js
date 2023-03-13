@@ -194,9 +194,10 @@ for (let index = 0; index < employees.length; index++) {
 
 function nameSetter(id, target) { // Список администрации
     console.log(target);
-    if (id != "superAdmin" || id != "admin"){
+    if (target.id != "superAdmin" || target.id != "admin"){
         
     }else {
+        console.log("procced");
         target.innerText = nameGetter(target.innerText);
     }
     /*switch (id) {
