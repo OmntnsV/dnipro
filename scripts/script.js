@@ -195,7 +195,7 @@ for (let index = 0; index < employees.length; index++) {
 function nameSetter(id, target) { // Список администрации
     console.log(target);
     if (target.id != "superAdmin" || target.id != "admin"){
-        
+        console.log("denied");
     }else {
         console.log("procced");
         target.innerText = nameGetter(target.innerText);
