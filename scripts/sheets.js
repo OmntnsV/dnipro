@@ -32,7 +32,7 @@ for (let row = 0; row < data.table.rows.length; row++) {
 });
 
 function nameGetter(request) {
-  console.log("Тест " + prof["Разработчик"]);
+  console.log("Тест " + request);
   if (request === "Начальник Метрополитена") {
     console.log("YPAAA");
     return prof["Разработчик"];
