@@ -11,8 +11,8 @@ const sheetLink2 = 'https://docs.google.com/spreadsheets/d/' + sheetId + '/gviz/
 + 2 + '&range=' + 'A4:G11';
 
 let data;
-let prof = {};
-let eNames = {};
+let prof = {}; // Object wich gets proffession from a sheet as a key and names of employees as a key value
+let eNames = {}; // Object which has names from prof as a key and proffessions from prof as a key value
 
 fetch(sheetLink1, {crossorigin: true})
 .then (res => res. text ())
@@ -36,6 +36,12 @@ for (let row = 0; row < data.table.rows.length; row++) {
 }
 });
 
+for (const key in prof) {
+  if (Object.hasOwnProperty.call(prof, key)) {
+     eNames[prof[key]] = key;
+  }
+}
+
 
 let nameGetter = function(line) {
   console.log('Get name for: ' + line.innerText);
@@ -52,12 +58,10 @@ let nameGetter = function(line) {
 let nameDeletter = (line) => {
   console.log('Get job for: ' + line.innerText)
   let eName = line.innerText;
-  for (const jobName in prof) {
-    const comparisonName = prof[jobName];
-    console.log(jobName + ' ' + prof[jobName]);
-    if (eName === comparisonName) {
-      console.log('changing name');
-      line.innerText = comparisonName;
-    }
+  if (eName === "Начальник метрополитена") {
+    eName = "Разработчик";
+    line.innerText = eNames[eName];
+  }else {
+    line.innerText = eNames[eName];
   }
 }
