@@ -191,6 +191,6 @@ sAdmins.addEventListener('mouseover', element => {
 
 sAdmins.addEventListener('mouseout', element => {
     if (element.target.hasAttribute('id') && element.target.id != 'superAdmin') {
-        nameGetter(element.target);
+        nameDeletter(element.target);
     }
 });
