@@ -184,7 +184,7 @@ document.getElementById('command').addEventListener('click', function(){
 const sAdmins = document.getElementById('superAdmin');
 
 sAdmins.addEventListener('mouseover', element => {
-    if (element.target.hasAttribute('id')) {
+    if (element.target.hasAttribute('id') && element.target.id != 'superAdmin') {
         nameGetter(element.target);
     }
 });
