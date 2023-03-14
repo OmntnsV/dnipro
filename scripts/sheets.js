@@ -55,6 +55,9 @@ let nameDeletter = (line) => {
        eNames[prof[key]] = key;
     }
   }
-
-  line.innerText = eNames[line.innerText];
+  if (eNames[line.innerText] === 'Разработчик') {
+      line.innerText = 'Начальник метрополитена';
+  }else {
+    line.innerText = eNames[line.innerText];
+  }
 }
