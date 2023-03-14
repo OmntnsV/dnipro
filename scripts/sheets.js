@@ -54,7 +54,9 @@ let nameDeletter = (line) => {
   let eName = line.innerText;
   for (const jobName in prof) {
     const comparisonName = prof[jobName];
+    console.log(jobName + ' ' + prof[jobName]);
     if (eName === comparisonName) {
+      console.log('changing name');
       line.innerText = comparisonName;
     }
   }
