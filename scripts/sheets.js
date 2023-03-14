@@ -18,16 +18,16 @@ fetch(sheetLink1, {crossorigin: true})
 .then (res => res. text ())
 .then (rep => {
 data = JSON.parse(rep.substr(47).slice(0, -2));
-console.log(data);
+// console.log(data);
 
 for (let row = 0; row < data.table.rows.length; row++) {
   const element = data.table.rows[row].c;
   if (row != 1) {
-    const nick = "" + element[0].v;
+    const nick = '' + element[0].v;
     const job = element[3].v;
     console.log(job + ': ' + nick);
     if (prof[job] != undefined) {
-        prof[job] += ", " + nick;
+        prof[job] += ', ' + nick;
     }else {
         prof[job] = nick;
     }
@@ -38,17 +38,19 @@ for (let row = 0; row < data.table.rows.length; row++) {
 
 
 let nameGetter = function(line) {
+  console.log('Get name for: ' + line);
   let proffession = line.innerText;
-  const forIf = "Начальник метрополитена";
+  const forIf = 'Начальник метрополитена';
   if (proffession === forIf) {
-    console.log("YPAAA");
-    line.innerText = "Разработчик";
+    console.log('YPAAA');
+    line.innerText = 'Разработчик';
   }else {
     line.innerText = prof[line.innerText];
   }
 }
 
 let nameDeletter = (line) => {
+  console.log('Remove name for: ' + line)
   let eName = line.innerText;
   for (let index = 0; index < prof.length; index++) {
     const comparisonName = prof[index];
