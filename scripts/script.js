@@ -186,7 +186,10 @@ const sAdmins = document.getElementById('superAdmin');
 for (let index = 0; index < sAdmins.length; index++) {
     const employee = sAdmins[index];
     if (employee.hasAttribute('id')) {
-        employee.addEventListener('mouseover', nameGetter(employee));
+        employee.addEventListener('mouseover', function(){
+            nameGetter(employee);
+            console.log("Hover on " + employee.innerText);
+        })
         employee.addEventListener('mouseout', nameDeletter(employee));
     }
 }
