@@ -38,7 +38,7 @@ for (let row = 0; row < data.table.rows.length; row++) {
 
 
 let nameGetter = function(line) {
-  console.log('Get name for: ' + line);
+  console.log('Get name for: ' + line.innerText);
   let proffession = line.innerText;
   const forIf = 'Начальник метрополитена';
   if (proffession === forIf) {
@@ -50,10 +50,10 @@ let nameGetter = function(line) {
 }
 
 let nameDeletter = (line) => {
-  console.log('Remove name for: ' + line)
+  console.log('Get job for: ' + line.innerText)
   let eName = line.innerText;
-  for (let index = 0; index < prof.length; index++) {
-    const comparisonName = prof[index];
+  for (const jobName in prof) {
+    const comparisonName = prof[jobName];
     if (eName === comparisonName) {
       line.innerText = comparisonName;
     }
