@@ -57,11 +57,5 @@ let nameDeletter = (line) => {
     }
   }
 
-  let eName = line.innerText;
-  if (eName === "Начальник метрополитена") {
-    eName = "Разработчик";
-    line.innerText = eNames[eName];
-  }else {
-    line.innerText = eNames[eName];
-  }
+  line.innerText = eNames[line.innerText];
 }
