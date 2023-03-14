@@ -12,6 +12,7 @@ const sheetLink2 = 'https://docs.google.com/spreadsheets/d/' + sheetId + '/gviz/
 
 let data;
 let prof = {};
+let eNames = {};
 
 fetch(sheetLink1, {crossorigin: true})
 .then (res => res. text ())
@@ -30,38 +31,29 @@ for (let row = 0; row < data.table.rows.length; row++) {
     }else {
         prof[job] = nick;
     }
+    eNames[nick] = job;
   }
 }
 });
 
-fetch(sheetLink2, {crossorigin: true})
-.then (res2 => res2. text ())
-.then (rep2 => {
-data = JSON.parse(rep2.substr(47).slice(0, -2));
-console.log(data);
 
-for (let row = 0; row < data.table.rows.length; row++) {
-  const element = data.table.rows[row].c;
-
-    const nick = "" + element[0].v;
-    const job = element[3].v;
-    console.log(job + ': ' + nick);
-    if (prof[job] != undefined) {
-        prof[job] += ", " + nick;
-    }else {
-        prof[job] = nick;
-    }
-
-}
-});
-
-function nameGetter(request) {
-  console.log("Тест " + request);
+let nameGetter = function(line) {
+  let proffession = line.innerText;
   const forIf = "Начальник метрополитена";
-  if (request === forIf) {
+  if (proffession === forIf) {
     console.log("YPAAA");
-    return prof["Разработчик"];
+    line.innerText = "Разработчик";
   }else {
-    return prof[request];
+    line.innerText = prof[line.innerText];
+  }
+}
+
+let nameDeletter = (line) => {
+  let eName = line.innerText;
+  for (let index = 0; index < prof.length; index++) {
+    const comparisonName = prof[index];
+    if (eName === comparisonName) {
+      line.innerText = comparisonName;
+    }
   }
 }
