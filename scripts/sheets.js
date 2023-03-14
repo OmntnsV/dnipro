@@ -43,7 +43,7 @@ let nameGetter = function(line) {
   const forIf = 'Начальник метрополитена';
   if (proffession === forIf) {
     console.log('YPAAA');
-    line.innerText = 'Разработчик';
+    line.innerText = prof['Разработчик'];
   }else {
     line.innerText = prof[line.innerText];
   }
