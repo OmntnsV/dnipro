@@ -39,7 +39,6 @@ for (let row = 0; row < data.table.rows.length; row++) {
 });
 
 let nameGetter = function(line) {
-  console.log('Get name for: ' + line.innerText);
   let proffession = line.innerText;
   const forIf = 'Начальник метрополитена';
   if (proffession === forIf) {
@@ -51,8 +50,6 @@ let nameGetter = function(line) {
 }
 
 let nameDeletter = (line) => {
-  console.log('Get job for: ' + line.innerText)
-
   for (const key in prof) {
     if (Object.hasOwnProperty.call(prof, key)) {
        eNames[prof[key]] = key;

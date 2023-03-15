@@ -129,13 +129,11 @@ function setSelectorOptions(displayList) {
 document.querySelector('#pathTo').addEventListener('change', function () {
 
     if (document.getElementById('dots') === null) {
-        console.log('NETU BLYAT TOCHEK');
     } else {
         document.getElementById('dots').remove();
     }
 
     if (document.getElementById('copy') === null) {
-        console.log('NETU BLYAT KOMANDI');
     } else {
         document.getElementById('copy').remove();
         document.getElementById('clipboard').remove();
