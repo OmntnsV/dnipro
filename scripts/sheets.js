@@ -26,6 +26,9 @@ for (let row = 0; row < data.table.rows.length; row++) {
     const nick = '' + element[0].v;
     const job = element[3].v;
     console.log(job + ': ' + nick);
+    if (nick === '-') {
+      nick = job + ' отсутствует';
+    }
     if (prof[job] != undefined) {
         prof[job] += ', ' + nick;
     }else {
