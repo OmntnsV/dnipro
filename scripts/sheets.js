@@ -23,12 +23,12 @@ data = JSON.parse(rep.substr(47).slice(0, -2));
 for (let row = 0; row < data.table.rows.length; row++) {
   const element = data.table.rows[row].c;
   if (row != 1) {
-    const nick = '' + element[0].v;
+    let nick = '' + element[0].v;
     const job = element[3].v;
-    console.log(job + ': ' + nick);
     if (nick === '-') {
-      nick = job + ' отсутствует';
+      nick = (job + ' отсутствует');
     }
+    console.log(job + ': ' + nick);
     if (prof[job] != undefined) {
         prof[job] += ', ' + nick;
     }else {
