@@ -1,33 +1,23 @@
 "use strict";
 
+
+console.log(document.getElementById('header').clientWidth);
+if (document.getElementById('header').clientWidth >= 1200) {
+    document.querySelector('.traffic__routes').classList.add('overflow__hiden');
+    document.querySelector('.comm__slider').classList.add('overflow__hiden');
+}
+
+
 const selectorSecond = document.querySelector('#pathTo');
-
-
-// for (const key in selectorSecond) {
-//     if (Object.hasOwnProperty.call(selectorSecond, key)) {
-//         console.log(key + " " + selectorSecond[key])
-//         delete selectorSecond.key;
-        
-//     }
-// }
-
-
 
 document.querySelector('#path').addEventListener('change', function () {
 
     if (document.querySelector('#pathTo').hasAttribute('disabled')) {
         document.querySelector('#pathTo').removeAttribute('disabled');
     }
-// const toRemove =
     document.querySelectorAll('.added').forEach((elem) => {
         elem.remove();
     });
-
-    // for (let index = 0; index < toRemove.length; index++) {     // Удалитель предыдущих вариантов
-    //     const element = toRemove[index];
-    //     element.remove();
-    //     console.log("Element type is: " + typeof element);
-    // }
 
     let choise = document.querySelector('#path').value;
 
@@ -129,13 +119,11 @@ function setSelectorOptions(displayList) {
 document.querySelector('#pathTo').addEventListener('change', function () {
 
     if (document.getElementById('dots') === null) {
-        console.log('NETU BLYAT TOCHEK');
     } else {
         document.getElementById('dots').remove();
     }
 
     if (document.getElementById('copy') === null) {
-        console.log('NETU BLYAT KOMANDI');
     } else {
         document.getElementById('copy').remove();
         document.getElementById('clipboard').remove();
@@ -181,128 +169,16 @@ document.getElementById('command').addEventListener('click', function(){
 /* COMMUNITY */
 
 
-const employees = document.querySelectorAll('.comm__proff');
-console.log(employees);
+const sAdmins = document.getElementById('superAdmin');
 
-
-for (let index = 0; index < employees.length; index++) {
-    const empElement = employees[index];
-    empElement.addEventListener('mouseout', function(empElement){
-        nameDeleter(empElement.srcElement);
-    });
-}
-
-function nameSetter(id, target) { // Список администрации
-    switch (id) {
-        case 'ceo':
-            target.innerText = 'Serge Smile';
-            break;
-        
-        case 'viceCeo':
-            target.innerText = 'Κουνέλι σε ποτήρια, 123';
-            break;
-
-        case 'rev':
-            target.innerText = '...:::Roman:::';
-            break;
-
-        case 'nsd':
-            target.innerText = 'Omntns';
-            break;
-
-        case 'nsps':
-            target.innerText = 'Временно отсутствует';
-            break;
-
-        case 'smi':
-            target.innerText = 'mashinist_ua, Scoofik20k2';
-            break;
-
-        case 'dsp':
-            target.innerText = 'KotoLizator';
-            break;
-
-        case 'mi':
-            target.innerText = 'Временно отсутствует';
-            break;
-
-        case 'iomi':
-            target.innerText = 'Временно отсутствует';
-            break;
-
-        case 'pm':
-            target.innerText = 'Почётный машинист';
-            break;
-            
-        default:
-            
-            break;
+sAdmins.addEventListener('mouseover', element => {
+    if (element.target.hasAttribute('id') && element.target.id != 'superAdmin') {
+        nameGetter(element.target);
     }
-};
+});
 
-function nameDeleter(element) {
-    const idOfElement = element.id;
-    switch (idOfElement) {
-        case 'ceo':
-            element.innerText = 'Начальник метрополитена';
-            break;
-        
-        case 'viceCeo':
-            element.innerText = 'Зам. начальника метрополитена';
-            break;
-
-        case 'rev':
-            element.innerText = 'Ревизор';
-            break;
-
-        case 'nsd':
-            element.innerText = 'Начальник службы движения';
-            break;
-
-        case 'nsps':
-            element.innerText = 'Начальник службы подв. состава';
-            break;
-
-        case 'smi':
-            element.innerText = 'Старший машинист-инструктор';
-            break;
-
-        case 'dsp':
-            element.innerText = 'Диспетчер';
-            break;
-
-        case 'mi':
-            element.innerText = 'Машинист-инструктор';
-            break;
-
-        case 'iomi':
-            element.innerText = 'И. О. машиниста-инструктора';
-            break;
-
-        case 'pm':
-            element.innerText = 'Почётный машинист';
-            break;
-
-        default:
-            element.innerText = '404 Role not found';
-            break;
+sAdmins.addEventListener('mouseout', element => {
+    if (element.target.hasAttribute('id') && element.target.id != 'superAdmin') {
+        nameDeletter(element.target);
     }
-};
-
-const superAdminsContianer = document.getElementById('superAdmin');
-
-superAdminsContianer.addEventListener('mouseover', function(event){
-    let selectedEmployee;
-    if (event.target.id != null) {
-        selectedEmployee = event.target.id;
-        nameSetter(selectedEmployee, event.target);
-    }
-})
-
-const adminsContianer = document.getElementById('admin');
-
-adminsContianer.addEventListener('mouseover', function(event){
-    if (event.target.id != null) {
-        nameSetter(event.target.id, event.target);
-    }
-})
+});

@@ -10,11 +10,13 @@
     <title>Dnipro Official</title>
     <link rel="icon" href="assets/images/logo_metro1.png">
 
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <!-- <script src="scripts/require.js"></script> -->
 </head>
 <body>
     
-    <div class="header">
+    <div class="header" id="header">
         <div class="container">
             <div class="header__inner">
                 <img class="header__logo" src="assets/images/logo_metro1.png" alt="Dnipro logo">
@@ -144,15 +146,15 @@
 
     <section class="comm">
         <div class="container">
-            <h2 class="comm__title">Сообщество</h2>
+            <h2 class="comm__title"><a href="https://discord.gg/MgcJfwQ294" class="comm__dislink">Сообщество</a></h2>
             <div class="comm__slider">
                 <div class="comm__slider-item" id="superAdmin">
                     <h3 class="routes__title"><op>Старш. администрация</op><hr></h3>
                     <div class="comm__proff" id="ceo">Начальник метрополитена</div>
-                    <div class="comm__proff" id="viceCeo">Зам. начальника метрополитена</div>
-                    <div class="comm__proff" id="rev">Ревзиор</div>
-                    <div class="comm__proff" id="nsd">Начальник службы движения</div>
-                    <div class="comm__proff" id="nsps">Начальник службы подв. состава</div>
+                    <div class="comm__proff" id="viceCeo">Зам. нач. метрополитена</div>
+                    <div class="comm__proff" id="rev">Ревизор</div>
+                    <div class="comm__proff" id="nsd">Нач. службы движения</div>
+                    <div class="comm__proff" id="nsps">Нач. службы подвижного состава</div>
                     <div class="comm__proff" id="smi">Старший машинист-инструктор</div>
                 </div>
                 <div class="comm__slider-item" id="admin">
@@ -179,7 +181,8 @@
         </div>
     </section>
 
-    <script src="scripts/script.js"></script>
+    <script scr="sheets.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
