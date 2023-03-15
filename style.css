@@ -415,6 +415,10 @@ section {
     border-radius: 5px;
 }
 
+.overflow__hiden {
+    overflow-x: hidden;
+}
+
 /* PROFESSIONS COLORS */
 
 #ceo:hover { background-color: #ea3323; border-color: #ea3323; }

@@ -1,33 +1,23 @@
 "use strict";
 
+
+console.log(document.getElementById('header').clientWidth);
+if (document.getElementById('header').clientWidth >= 1200) {
+    document.querySelector('.traffic__routes').classList.add('overflow__hiden');
+    document.querySelector('.comm__slider').classList.add('overflow__hiden');
+}
+
+
 const selectorSecond = document.querySelector('#pathTo');
-
-
-// for (const key in selectorSecond) {
-//     if (Object.hasOwnProperty.call(selectorSecond, key)) {
-//         console.log(key + " " + selectorSecond[key])
-//         delete selectorSecond.key;
-        
-//     }
-// }
-
-
 
 document.querySelector('#path').addEventListener('change', function () {
 
     if (document.querySelector('#pathTo').hasAttribute('disabled')) {
         document.querySelector('#pathTo').removeAttribute('disabled');
     }
-// const toRemove =
     document.querySelectorAll('.added').forEach((elem) => {
         elem.remove();
     });
-
-    // for (let index = 0; index < toRemove.length; index++) {     // Удалитель предыдущих вариантов
-    //     const element = toRemove[index];
-    //     element.remove();
-    //     console.log("Element type is: " + typeof element);
-    // }
 
     let choise = document.querySelector('#path').value;
 
