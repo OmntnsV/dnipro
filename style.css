@@ -234,8 +234,8 @@ section {
 }
 
 .routes__selector {
-    background-color: #161616;
-
+    background-color: #434d5c;
+    background-color: transparent;
     color: #fff;
     font-size: 14px;
     padding: 10px;
