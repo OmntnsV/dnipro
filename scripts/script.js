@@ -1,5 +1,21 @@
-"use strict";
 
+
+document.getElementById('menu__button').addEventListener('click', event => {
+    
+
+})
+
+function openMenu() {
+    const menuDiv = document.getElementById('menu');
+    menuDiv.style.display = 'flex';
+    menuDiv.style.opacity = 1;
+}
+
+function closeMenu() {
+    const menuDiv = document.getElementById('menu');
+    menuDiv.style.opacity = 0;
+    setTimeout(() => menuDiv.style.display = 'none', 500);
+}
 
 console.log(document.getElementById('header').clientWidth);
 if (document.getElementById('header').clientWidth >= 1200) {

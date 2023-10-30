@@ -12,7 +12,6 @@
 
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="scripts/require.js"></script> -->
 </head>
 <body>
     
@@ -21,12 +20,12 @@
             <div class="header__inner">
                 <img class="header__logo" src="assets/images/logo_metro1.png" alt="Dnipro logo">
                 <div class="nav">
-                    <a href="#" class="nav__link">Светофоры</a>
-                    <a href="#" class="nav__link">Сообщество</a>
-                    <a href="#" class="nav__link">Правила</a>
-                    <a href="#" class="nav__link">Коллекция</a>
-                    <a href="#" class="nav__link">Играть</a>
-                    <button class="nav__menu" type="button">
+                    <a href="#traffics" class="nav__link">Светофоры</a>
+                    <a href="#community" class="nav__link">Сообщество</a>
+                    <a href="#rules" class="nav__link">Правила</a>
+                    <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2190107138" class="nav__link" target="_blank">Коллекция</a>
+                    <a href="steam://connect/194.15.113.187:27017" class="nav__link">Играть</a>
+                    <button class="nav__menu" onclick="openMenu()" type="button">
                         <div class="nav__menu-line"></div>
                         <div class="nav__menu-line"></div>
                         <div class="nav__menu-line"></div>
@@ -36,6 +35,22 @@
         </div>
     </div>
 
+
+    <!--MENU-->
+
+    <div id="menu">
+        <ul class="menu__list">
+            <li class="menu__item"><button class="menu__button" type="button" onclick="closeMenu()"><a href="#traffics" class="menu__link">Светофоры</a></button></li>
+            <hr>
+            <li class="menu__item"><button class="menu__button" type="button" onclick="closeMenu()"><a href="#community" class="menu__link">Сообщество</a></button></li>
+            <hr>
+            <li class="menu__item"><button class="menu__button" type="button" onclick="closeMenu()"><a href="#rules" class="menu__link">Правила</a></button></li>
+            <hr>
+            <li class="menu__item"><button class="menu__button" type="button" onclick="closeMenu()"><a target="_blank" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2190107138" class="menu__link">Коллекция</a></button></li>
+            <hr>
+            <li class="menu__item"><button class="menu__button" type="button" onclick="closeMenu()"><a href="#header" class="menu__link">Закрыть</a></button></li>
+        </ul>
+    </div>
 
     <!-- INTRO -->
 
@@ -51,7 +66,7 @@
     <!-- TRAFFIC -->
 
 
-    <section class="traffic">
+    <section class="traffic" id="traffics"">
         <div class="container">
             <h2 class="traffic__title">Открытие светофоров
                 <div class="traffic__lights-container">
@@ -144,7 +159,7 @@
     <!-- COMMUNITY -->
 
 
-    <section class="comm">
+    <section class="comm" id="community">
         <div class="container">
             <h2 class="comm__title"><a href="https://discord.gg/MgcJfwQ294" class="comm__dislink">Сообщество</a></h2>
             <div class="comm__slider">
@@ -180,6 +195,194 @@
             </div>
         </div>
     </section>
+
+
+    <!-- RULES -->
+
+
+    <section id="rules">
+        <div class="container">
+            <h2 class="rules__title">Правила</h2>
+            <div class="rules__section">
+                <h3 class="rules__subtitle">Основные положения</h3>
+                <hr>
+                <div class="rules__rule">
+                    <p class="rule_number">1.1</p>
+                    <p class="rule__text">Внутренние правила сервера Metrostroi Dnipro (далее - ВПС) – основной верховный документ сервера. Иные правила, указы и документы не могут противоречить пунктам, изложенным в ВПС. Если приказ, указ, пункт документа или правило противоречат ВПС, то оно не является обязательным к исполнению и аннулируется.</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">1.2</p>
+                    <p class="rule__text">Каждый игрок обязан быть ознакомленным с ВПС и беспрекословно их выполнять. Каждый игрок после того, как зашёл на сервер – даёт своё согласие на то, что был ознакомлен со всеми правилами сервера, а также обязуется беспрекословно их соблюдать.</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">1.3</p>
+                    <p class="rule__text">ВПС распространяются на всех игроков сервера, независимо от их статуса на сервере. Все игроки обязаны нести ответственность за нарушения пунктов, изложенных в данном документе. В некоторых случаях исключением является администрация, которая вправе нарушить ВПС ради исполнения своих обязанностей, если этого требует ситуация.</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">1.4</p>
+                    <p class="rule__text">Об изменениях в ВПС администрация обязана сообщать игрокам в специальном канале ⁠новости в случаях добавления новых пунктов или удаления старых.</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">1.5</p>
+                    <p class="rule__text">Структура запрещающих пунктов настоящего документа такова: сначала описывается запрещённое (-ые) деяние (-я), после в квадратных скобках указывается наказание за совершение данного деяния в присутствии кого-либо из администрации (и при этом администратор следил за нарушением), а далее в фигурных скобках указывается наказание за совершения данного деяния в случае, если кто-то из игроков подал жалобу на форум.</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">1.6</p>
+                    <p class="rule__text">Меры наказания игроков за совершенные ими деяния, описанные в данном документе, трактуются так:<br><br>Кик – удаление игрока с сервера с возможностью мгновенного перезахода на сервер.<br>Бан – удаление игрока с сервера на определенный срок с возможностью входа на сервер по истечении этого срока.<br>Мут – ограничение игроку доступа к игровым чатам на определенный срок.</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">1.7</p>
+                    <p class="rule__text">Правила, устанавливающие иные сроки наказаний для определённых групп игроков, признаются неправомерными.</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">1.8</p>
+                    <p class="rule__text">Игрок не может дважды быть наказан за одно и то же нарушение, наказание за которое он уже понёс.</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">1.9</p>
+                    <p class="rule__text">При появлении в Discord-сервере игрок должен сделать свой никнейм такой же, как в игре (то бишь, ник в Steam).</p>
+                </div>
+            </div>
+
+
+
+            <div class="rules__section">
+                <h3>Администрация</h3>
+                <hr>
+                <div class="rules__rule">
+                    <p class="rule__number">2.1</p>
+                    <p class="rule__text">Администратор – официальный представитель сервера. Он является гарантом соблюдения игроками правил сервера, оказывает помощь игрокам по решению игровых вопросов, стремится к созданию комфортных условий игры для всех игроков. По умолчанию администратор является игровым персонажем (машинист или диспетчер) и участвует в игровом процессе.</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">2.2</p>
+                    <p class="rule__text">Администратор является игроком с расширенными правами и обязанностями, следовательно, если в пунктах данного документа описан запрет для игрока, он распространяется и на администратора.</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">2.3</p>
+                    <p class="rule__text">Запрещено препятствовать или создавать помехи работе администрации сервера. [Кик | Бан 5 часов] {Не наказуемо}</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">2.4</p>
+                    <p class="rule__text">Запрещены выход из игры или смена игрового никнейма для обхода наказания за нарушение правил сервера. [Удвоение наказания] {Не наказуемо}</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">2.5</p>
+                    <p class="rule__text">Запрещено обманывать администрацию, вводить её в заблуждение в игре или в дискорде. [Бан 15 дней] {Бан 15 дней}</p>
+                </div>
+            </div>
+        
+        
+        
+            <div class="rules__section">
+                <h3>Игровой чат</h3>
+                <hr>
+                <div class="rules__rule">
+                    <p class="rule__number">3.1</p>
+                    <p class="rule__text">Основные языки общения на сервере – русский, украинский и английский.</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.2</p>
+                    <p class="rule__text">Caps Lock – написание сообщений с преобладанием верхнего регистра (заглавных букв). Исключение: аббревиатуры и названия. [Предупреждение => Мут 10 минут] {Не наказуемо}</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.3</p>
+                    <p class="rule__text">Flood – чрезмерно частое написание одного и того же сообщения или одновременное написание </p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.4</p>
+                    <p class="rule__text">Spam – реклама сторонних ресурсов, то есть всего, что не имеет отношения к проекту. [Перманентный бан] {Перманентный бан}</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.5</p>
+                    <p class="rule__text">[TL] Transliteration – набор русского текста латинскими буквами, и наоборот. [Предупреждение => Мут 10 минут] {Не наказуемо}
+                        Например – «Privet, Kak dela» пр.
+                        Допускается использование только в том случае, если у игрока нет русской раскладки клавиатуры.</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.6</p>
+                    <p class="rule__text">Чрезмерное употребление нецензурных слов и выражений. [Предупреждение => Мут до 2 часов] {Не наказуемо}</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.7</p>
+                    <p class="rule__text">Оскорбление игроков сервера. [Мут до 2 часов | Бан до 5 дней] {Бан до 5 дней}</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.8</p>
+                    <p class="rule__text">Оскорбление администрации, разработчиков, проекта в целом. [Бан до 15 дней] {Бан до 15 дней}</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.9</p>
+                    <p class="rule__text">Оскорбление родственников игроков, администрации или разработчиков. [Бан 30 дней] {Бан 30 дней}
+                        Желание смерти приравнивается к оскорблению.</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.10</p>
+                    <p class="rule__text">Упоминание родственников в негативном контексте. Также, к упоминанию относятся подобные подобные фразы: "MQ", "Маме привет" и т.д. [Бан от 20 до 60 дней] {Бан от 30 до 60 дней}</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.11</p>
+                    <p class="rule__text">Религиозные, политические провокации, а также оскорбления, связанные с религиозной или политической принадлежностью игрока. [Бан 60 дней] {Бан 60 дней}</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.12</p>
+                    <p class="rule__text">Проявление ненависти, основанной на расовой или национальной принадлежности игрока, если сказано кому-то в лицо или в присутствии тех, кого оскорбляют. [Бан 15 дней] {Бан 15 дней}</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.13</p>
+                    <p class="rule__text">Проявление ненависти в отношении народа определённого государства, политики его правительства. [Бан 15 дней] {Бан 15 дней}</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.14</p>
+                    <p class="rule__text">Представление администратором сервера, не являясь таковым. [Бан до 30 дней] {Бан до 30 дней}</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.15</p>
+                    <p class="rule__text">Использование никнеймов с наличием провокационных слов, рекламы, никнеймов схожие либо идентичные именам реальных деятелей фашизма, нацизма, известных политиков. [Требование сменить ник => Кик => Бан 5 дней] {Бан 5 дней}</p>
+                </div>
+                <hr class="rules__divider">
+                <div class="rules__rule">
+                    <p class="rule__number">3.16</p>
+                    <p class="rule__text">Если администратор уходит с сервера – он обязан убрать мут у игрока (если игрок продолжает нарушать – следует наказание [Бан 2 дня]) {Бан 3 дня}.</p>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="container">
+                <div class="footer__inner">
+                    <a href="#header">
+                        <img class="header__logo" src="assets/images/logo_metro1.png" alt="Dnipro logo">
+                    </a>
+                    <p style="opacity: .5">Metrostroi Dnipro Official 2022. All rights reserved</p>
+                </div>
+            </div>
+        </footer>
 
     <script src="scripts/sheets.js"></script>
     <script src="scripts/script.js"></script>
