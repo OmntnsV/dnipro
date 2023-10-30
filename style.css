@@ -463,6 +463,24 @@ section {
     overflow-x: hidden;
 }
 
+#superAdmin {
+    position: relative;
+}
+
+#superAdmin::after {
+    display: none;
+    position: absolute;
+    content: "";
+    right: 5;
+    bottom: -27px;
+    border: #fff 2px solid;
+    border-left: none;
+    border-bottom: none;
+    width: 13px;
+    height: 13px;
+    transform: rotate(45deg);
+}
+
 /* RULES */
 
 
@@ -630,6 +648,10 @@ section {
         }
 
         #item__selector::after {
+            display: block;
+        }
+
+        #superAdmin::after {
             display: block;
         }
 
