@@ -44,6 +44,10 @@ op {
     opacity: .9;
 }
 
+option {
+    background-color: #161616;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
