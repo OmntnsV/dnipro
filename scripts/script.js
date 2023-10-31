@@ -1,10 +1,5 @@
 
 
-document.getElementById('menu__button').addEventListener('click', event => {
-    
-
-})
-
 function openMenu() {
     const menuDiv = document.getElementById('menu');
     menuDiv.style.display = 'flex';
